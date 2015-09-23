@@ -3,8 +3,8 @@ experiments = function() {
         confirm_human: function() {
             $.post("/experiments/confirm_human/");
         },
-        goal: function(goal_name) {
-            $.post("/experiments/goal/" + goal_name);
+        goal: function(goal_name, success_callback) {
+            $.post("/experiments/goal/" + goal_name, {}, success_callback);
         }
     };
 }();
